@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us ! - L.A EVENT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- nav bar -->
+    <div class="top">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="maquette.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+            </div>
+
+            <div class="navbar-right">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label> <!-- Icône burger -->
+                <ul class="navbar-menu">
+                    <li><a href="maquette.html">Home</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#speaker">Speaker</a></li>
+                    <li><a href="#sponsor">Sponsor</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="contact.html" id="home">Contact</a></li>
+                </ul>
+                <div class="navbar-divider"></div>
+                <div class="search-container">
+                    <img src="img/search-icon.png" alt="Rechercher" class="search-icon">
+                </div>
+                <button class="btn-tickets">Buy<br>Tickets</button>
+            </div>
+        </nav>
+
+        <!-- BLOC 1 (herosection) -->
+        <div class="herosection">
+            <div class="subtitle">
+                <div class="subtitle_1">Business Meetup</div>
+                <div class="subtitle_2" id="highlight-text">Brunswick, Canada</div>
+            </div>
+            <h1 class="title">contact<br><span class="highlight-text">us</span></h1>
+            <div class="countdown_subtitle">Starting in ↓</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number">10</div>
+                    <div class="countdown-label">jours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">12</div>
+                    <div class="countdown-label">heures</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">30</div>
+                    <div class="countdown-label">minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">45</div>
+                    <div class="countdown-label">secondes</div>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <!--BLOC CONTACT-->
+            <div class="contact-content">
+                <!-- Formulaire de contact -->
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">your email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">what's your message?</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">send message</button>
+                </form>
+            </div>
+
+            <!-- bloc 8 (sponsors) -->
+    <div class="sponsors-section">
+        <h2 class="section-title" id="sponsor">event<br>sponsors</h2>
+        <div class="sponsors">
+            <div class="sponsor" id="logo1"><img src="img/logo1.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo2"><img src="img/logo2.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo3"><img src="img/logo3.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo4"><img src="img/logo4.png" alt="Logo du sponsor"></div>
+        </div>
+    </div>
+</body>
+</html>

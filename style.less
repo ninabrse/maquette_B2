@@ -1,0 +1,1316 @@
+// animation d'ouverture de page
+@keyframes fadeIn {
+  from { // début de l'animation
+      opacity: 0.5; // opacité initiale à 0.5
+  }
+  to { // fin de l'animation
+      opacity: 1; // opacité finale à 1
+  }
+}
+
+// polices utilisées
+@font-face {
+  font-family: "Oswald_el"; 
+  src: url('fonts/Oswald-ExtraLight.ttf') format("truetype"); 
+}
+@font-face {
+  font-family: "Oswald_l"; 
+  src: url('fonts/Oswald-light.ttf') format("truetype"); 
+}
+@font-face {
+  font-family: "Oswald_med"; 
+  src: url('fonts/Oswald-medium.ttf') format("truetype"); 
+}
+@font-face {
+  font-family: "Oswald_sb";
+  src: url('fonts/Oswald-SemiBold.ttf') format("truetype"); 
+}
+@font-face {
+  font-family: "OswaldR"; 
+  src: url('fonts/Oswald-Regular.ttf') format("truetype"); 
+}
+@font-face {
+  font-family: "Oswald_Bold"; 
+  src: url('fonts/Oswald-Bold.ttf') format("truetype");
+}
+
+// définition des couleurs principales
+:root {
+  --pink: #E7196B; // couleur rose
+  --green: #B4DD1E; // couleur verte
+  --purple: #73559F; // couleur violette
+}
+
+// styles du corps de la page
+body {
+  font-family: OswaldR; // police par défaut pour le corps
+  font-size: 16px; // taille de police
+  margin: 0; // supprimer les marges par défaut
+  background-color: white; // couleur de fond blanche
+  width: 100%; // largeur à 100%
+  animation: fadeIn 0.75s ease-in-out; // appliquer l'animation d'ouverture de page
+}
+
+.header {
+  width: 100%;
+}
+
+.top {
+  background-color: var(--purple); 
+}
+
+.herosection {
+  padding: 5% 20%; // espacement intérieur de la section héros
+  color: white; // couleur du texte dans la section héros
+  width: 100%;
+  box-sizing: border-box; // inclure le padding dans la largeur totale
+}
+
+.highlight-text {
+  color: var(--pink); // couleur du texte mis en avant
+}
+
+#highlight-text {
+  color: var(--pink); // couleur du texte mis en avant
+}
+
+.subtitle {
+  display: flex; // utiliser un modèle de boîte flexible pour le sous-titre
+}
+
+.subtitle_1 {
+  padding-right: 1%; // espacement intérieur à droite 
+}
+
+.subtitle_2 {
+  border-left-style: solid; // ajouter une bordure à gauche du deuxième sous-titre
+  padding-left: 1%; // espacement intérieur à gauche
+  font-size: 12px;
+}
+
+.title {
+  font-family: Oswald_sb; 
+  text-transform: uppercase; // transformer le texte en majuscules
+  margin: 2% 0; // marges en haut et en bas (supprimer les marges sur les côtés)
+  padding-left: 2%;
+  font-size: 50px;
+  line-height: 100%; // hauteur de ligne pour le titre
+  border-left-style: solid; // ajouter une bordure à gauche
+  max-width: 55%; // largeur maximale du titre
+}
+
+.countdown_subtitle {
+  font-size: 12px;
+  margin-bottom: 2%; // marge en bas
+}
+
+.countdown {
+  display: flex;
+  gap: 2%; // espacement entre les éléments
+}
+
+.countdown-item {
+  background-color: var(--pink);
+  color: white; // couleur du texte en blanc
+  padding: 2%;
+  border-radius: 10%; // coins arrondis
+  text-align: center; // centrer le texte
+  min-width: 10%; // largeur minimale de la div
+  display: flex;
+  flex-direction: column; // organiser les éléments enfants en colonne
+  line-height: 160%; // hauteur de ligne de 25px pour l'espacement du texte
+}
+
+.countdown-number {
+  font-size: 25px; 
+  font-weight: bold; // rendre le texte en gras
+}
+
+.countdown-label {
+  font-size: 18px; 
+  margin-top: 2%; // marge en haut de 5px
+}
+
+
+//RESPONSIVE DESIGN TAB:
+@media  (min-width: 480px) and (max-width: 768px) {
+  .herosection {
+      padding: 4% 10%; 
+      text-align: center; 
+  }
+
+  .subtitle {
+      flex-direction: column; //mettre en colonne
+      align-items: center;
+      font-size: 1em;
+  }
+
+  .title {
+      font-size: 2.5em; 
+      max-width: 80%; 
+      margin: 0 auto; 
+  }
+
+  .countdown {
+      gap: 1em; 
+      justify-content: center; 
+  }
+
+  .countdown-item {
+      min-width: 50px; 
+      padding: 1em; 
+  }
+
+  .countdown-number {
+      font-size: 1.5em; 
+  }
+
+  .countdown-label {
+      font-size: 1em; 
+  }
+}
+
+//RESPONSIBE DESIGN PHONE:
+@media (max-width: 480px) {
+  .herosection {
+      padding: 5% 5%; 
+      text-align: center;
+  }
+
+  .title {
+      font-size: 2em; 
+      max-width: 100%; 
+      padding-left: 0; 
+      border-left: none; 
+  }
+
+  .countdown {
+      flex-wrap: wrap; //permettre aux items de se mettre en colonne si nécessaire
+      gap: 0.5em; 
+  }
+
+  .countdown-item {
+      width: 48%; 
+      padding: 0.5em;
+  }
+
+  .countdown-number {
+      font-size: 1.3em; 
+  }
+
+  .countdown-label {
+      font-size: 0.8em; 
+  }
+}
+
+// BLOC 2 (TOPIC)
+.topicsection {
+  padding: 5% 20%;
+  position: relative; // position relative pour les éléments enfants
+}
+
+#topic {
+  background-color: white; 
+  width: fit-content; // largeur ajustée au contenu
+  padding: 1% 2%; 
+  position: absolute; // position absolue par rapport au parent
+  top: 2.5%;
+  left: 22%;
+}
+
+#topic-img {
+  width: 50%;
+  height: auto; // hauteur de l'image
+  margin: 5%; // marge de 20px autour de l'image
+  border-bottom-style: solid; // bordure visible en bas de l'image
+  border-color: red; // couleur de la bordure en rouge
+}
+
+.topic-right {
+  position: absolute; 
+  width: 20%;
+  bottom: 18%;
+  right: 22%; 
+}
+
+.topic-left {
+  margin-top: 5%;
+}
+
+.topicsection-content {
+  border-style: solid;
+  border-color: var(--purple);
+  border-width: 0.5rem; // largeur de la bordure 
+  padding: 5%;
+  display: flex; 
+  align-self: flex-end; // aligner l'élément depuis la fin
+}
+
+.topic-right {
+  display: flex; 
+  font-size: 14px; 
+  color: var(--purple); 
+  max-width: 25%;
+  background-color: white; 
+  padding: 2%; 
+  border-top-style: solid; 
+  border-color: var(--green); 
+  font-family: Oswald_l; 
+}
+
+.topic-text:hover {
+  color: var(--green); // changer la couleur du texte en vert au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+}
+
+.section-title {
+  color: var(--purple); 
+  font-size: 30px; 
+  text-transform: uppercase;
+  line-height: 100%; 
+  font-family: Oswald_sb; 
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .topicsection {
+      padding: 5% 10%;
+  }
+
+  #topic {
+    position:relative;
+    font-size: 1.5em; 
+    top:auto;
+    left:auto;
+  }
+
+  .topicsection-content {
+      flex-direction: column; //empiler les items en colonne
+      align-items: center; 
+      padding: 3%; 
+      border-width:0.5em;
+  }
+
+  #topic-img {
+      width: 80%; 
+      margin: 3% 0; 
+  }
+
+  .topic-left{
+      width: 100%; 
+      margin-top: 2%; 
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .topic-text{
+    font-size:12px;
+  }
+
+  .topic-right {
+      position: relative; 
+      padding: 2%; 
+      border-top: 2px solid var(--green); 
+      bottom:auto;
+      right:auto;
+      min-width: 75%;
+  }
+
+  .section-title {
+      font-size: 1.8em; 
+  }
+}
+
+//REPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .topicsection {
+      padding: 5%; 
+  }
+
+  #topic {
+      left: 5%; 
+      top: 0; 
+      font-size: 1.5em;
+  }
+
+  .topicsection-content {
+      padding: 4%; 
+  }
+
+  #topic-img {
+      width: 100%; 
+      margin: 2% 0; 
+  }
+
+  .topic-left, .topic-right {
+      width: 100%; 
+      text-align: center; 
+      margin-top: 2%; 
+  }
+
+  .topic-right {
+      padding: 3%; 
+      font-size: 0.9em; 
+  }
+
+  .section-title {
+      font-size: 1.5em; 
+  }
+
+  .topic-text {
+      font-size: 0.9em;
+  }
+}
+
+// BLOC 3 : SPEAKERS
+
+.speakers-section {
+  padding: 5% 20%;
+  display: flex; 
+  justify-content: space-between; // répartir l'espace entre les éléments
+}
+
+.register {
+  width: 1.5em;
+  height: auto; // hauteur automatique pour maintenir le ratio
+}
+
+.register-button {
+  font-family: Oswald_sb; 
+  font-size: 14px; 
+  display: flex; 
+  gap: 2%;
+  transition: transform 0.3s ease; // transition douce pour l'effet de transformation
+  margin-top:1em;
+}
+
+.register-button:hover {
+  transform: scale(1.1); // agrandir légèrement au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+  color: var(--pink); // changer la couleur du texte en rose au survol
+}
+
+#speaker-img {
+  width: 40%;
+}
+
+.description {
+  font-family: Oswald_el; 
+  font-size: 16px; 
+  margin-left: 5%; 
+  margin-bottom: 5%; 
+  color: var(--purple); 
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .speakers-section {
+      padding: 5% 10%; 
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .register-left {
+      text-align: center; 
+      margin-bottom: 2%; 
+  }
+
+  .section-title {
+      font-size: 2em; 
+  }
+
+  .description {
+      font-size: 1em; 
+      margin-left: 0; 
+  }
+
+  .register-button {
+      font-size: 1em; 
+      gap: 1em; 
+      align-self: center;  
+    }
+
+  #speaker-img {
+      width: 60%; 
+      margin-top: 2%; 
+  }
+}
+
+//RESPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .speakers-section {
+      padding: 5%; 
+      align-items: center;
+
+  }
+
+  .section-title {
+      font-size: 1.8em; 
+  }
+
+  .description {
+      font-size: 0.9em; 
+  }
+
+  .register-button {
+      font-size: 0.9em; 
+      gap: 0.5em; 
+      align-items: center;
+  }
+
+  .register {
+      width: 10%; 
+  }
+
+  #speaker-img {
+      width: 80%; 
+      margin-top: 3%; 
+  }
+}
+
+
+// BLOC 4 : EVENTS
+
+.event-section {
+  padding: 5% 20%;
+  background-color: var(--purple);
+  position: relative;
+}
+
+#event {
+  background-color: white; 
+  width: fit-content; // largeur ajustée au contenu
+  padding: 1% 2%; 
+  position: absolute; // position absolue par rapport au parent
+  top: -9%;
+  left: 22%;
+}
+
+.planning {
+  margin: 1rem 0;
+  text-transform: capitalize; // mettre la première lettre de chaque mot en majuscule
+}
+
+.dates {
+  display: flex; 
+  justify-content: space-between; 
+  color: white;
+  background-color: #5d3e8b; 
+}
+
+.date-block {
+  padding: 1em 5em; 
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: #866ab1; 
+  transition: transform 0.3s ease;
+}
+
+.date-block:hover {
+  transform: scale(1.1); // agrandir légèrement au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+  background-color: #3c2460; 
+}
+
+#selected-date {
+  background-color: var(--pink); 
+  text-decoration: underline; // souligner le texte
+}
+
+.sessions {
+  display: flex;
+  justify-content: space-between;
+  background-color: black; 
+  color: rgb(199, 197, 197);
+  padding: 1% 5%;
+  text-transform: uppercase; 
+  font-size: 12px; 
+  font-family: Oswald_l; 
+}
+
+#selected-session {
+  color: var(--green);
+  font-family: Oswald_sb; 
+}
+
+.session {
+  transition: transform 0.3s ease;
+}
+
+.session:hover {
+  transform: scale(1.1); // agrandir légèrement au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+  color: var(--pink); // changer la couleur du texte en rose au survol
+}
+
+.planning-image {
+  border-style: solid;
+  border-top-style: none; // pas de bordure en haut
+  border-color: #5d3e8b; 
+  background-color: #5d3e8b;
+  box-sizing: border-box; // inclure la bordure et le padding dans la taille de la div
+  border-width: 0.2em;
+  width: 100%;
+  height: 15em;
+  background-image: url('img/event.png'); // image de fond pour l'élément
+  background-size: contain; // adapter l'image pour qu'elle soit entièrement visible
+  background-repeat: no-repeat; // ne pas répéter l'image
+  background-position: center; // centrer l'image de fond
+}
+
+.full-view {
+  color: var(--green);
+  font-family: Oswald_sb; 
+  text-decoration: underline; // souligner le texte
+  display: flex; 
+  justify-content: center; 
+  text-transform: uppercase;
+  transition: transform 0.3s ease; 
+}
+
+.full-view:hover {
+  transform: scale(1.1); // agrandir légèrement au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+  color: var(--pink); // changer la couleur du texte en rose au survol
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .event-section {
+      padding: 5% 10%; 
+      text-align: center; 
+  }
+
+  #event {
+      position:relative;
+      left: 0;
+      top:0;
+      font-size: 1.8em; 
+  }
+
+  .planning {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .dates{
+    font-size:14px;
+  }
+
+  .sessions{
+    font-size:10px;
+    padding: 1% 0%;
+  }
+
+  .dates, .sessions {
+      width: 100%; 
+  }
+
+  .date-block, .session {
+      width: 80%; 
+      margin: 5px 0; 
+      text-align: center; 
+      padding: 1em; 
+  }
+
+  .planning-image {
+      height: 10em; 
+  }
+
+  .full-view {
+      font-size: 12px; 
+  }
+}
+
+//RESPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .event-section {
+      padding: 5% 5%; 
+  }
+
+  #event {
+      left: 5%; 
+      font-size: 1.5em; 
+  }
+
+  .dates, .sessions {
+      flex-direction: column; 
+  }
+
+  .sessions{
+    padding: 1% 0%;
+  }
+
+  .date-block, .session {
+      width: 90%; 
+      font-size: 0.9em; 
+  }
+
+  .planning-image {
+      height: 8em; 
+  }
+
+  .full-view {
+      font-size: 12px; 
+  }
+}
+
+//BLOC 5 : BOOK YOUR SEAT
+
+#book-img {
+  width: 50%;
+  height: auto; 
+  border-right-style: solid; 
+  box-sizing: border-box; 
+  border-color: var(--green);
+  border-width: 10px;
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .speakers-section {
+      padding: 5% 10%; 
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .register-left {
+      text-align: center; 
+      margin-bottom: 2%; 
+  }
+
+  .section-title {
+      font-size: 2em; 
+  }
+
+  .description {
+      font-size: 1em; 
+      margin-left: 0; 
+  }
+
+  .register-button {
+      font-size: 1em; 
+      gap: 1em; 
+  }
+
+  #book-img {
+      width: 70%; 
+      margin-top: 2%; 
+  }
+}
+
+//RESPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .speakers-section {
+      padding: 5% 5%; 
+      align-items: center;
+  }
+
+  .section-title {
+      font-size: 1.5em; 
+  }
+
+  .description {
+      font-size: 0.9em; 
+  }
+
+  .register-button {
+      font-size: 0.9em; 
+      gap: 0.5em; 
+  }
+
+  .register {
+      width: 10%; 
+  }
+
+  #book-img {
+      width: 80%; 
+      margin-top: 3%; 
+  }
+}
+
+
+// BLOC 6 : MAP
+
+.map {
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px; 
+  border: 0; // pas de bordure
+}
+
+.map-overlay {
+  height: 90%; // hauteur
+  width: 22%;
+  position: absolute;
+  top: 2%; 
+  left: 20%;
+  background-image: url('img/hexagon.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1%;
+  line-height: 50%; // hauteur de ligne 
+  font-size: 12px;
+  font-family: Oswald_l; 
+  color: white;
+  align-content: center;
+}
+
+.q {
+  font-family: Oswald_sb; 
+  font-size: 16px;
+}
+
+.overlay-section {
+  border-left-style: solid;
+  padding-left: 1%;
+  border-width: 0.2em;
+  margin-left: 35%;
+}
+
+//REPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .map {
+      padding: 0 10%; 
+  }
+
+  .map iframe {
+      height: 250px; 
+  }
+
+  .map-overlay {
+      width: 100%;
+      position:relative;
+      margin:0;
+      left: 0;
+      top:0;
+      font-size: 10px; 
+      background-image: none;
+      display: flex;
+      justify-content: space-around;
+      background-color:var(--purple);
+  }
+
+  .overlay-section {
+      margin-left: 0; 
+      padding-left: 0; 
+      border-left-style: none; 
+      padding-top: 5%; 
+      display: flex;
+      padding:0;
+      flex-direction:column;
+      justify-content: center;
+  }
+
+  .q {
+      font-size: 14px; 
+  }
+}
+
+//RESPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .map {
+      padding: 0 5%; 
+  }
+
+  .map iframe {
+      height: 200px; 
+  }
+
+  .map-overlay {
+      width: 90%; 
+      left: 5%; 
+      font-size: 9px; 
+      position:relative;
+      margin:0;
+      left: 0;
+      top:0;
+      font-size: 10px; 
+      background-image: none;
+      display: flex;
+      justify-content: space-around;
+      background-color:var(--purple);
+  }
+
+  .overlay-section {
+      margin-left: 0; 
+      padding-left: 0; 
+      border-left-style: none; 
+      padding-top: 5%;
+      flex-direction:column;
+      justify-content: center;
+  }
+
+  .q {
+      font-size: 12px;
+  }
+}
+
+// BLOC 7 : PREVILEGES
+
+.previleges {
+  padding: 5% 20%;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.previleges-mobile {
+  display: flex; 
+}
+
+.arrows {
+  width: 2em;
+  height: auto; 
+  margin-left: 5%; 
+  transition: transform 0.3s ease; 
+}
+
+.arrows:hover {
+  transform: scale(1.1); // agrandir légèrement au survol
+  cursor: pointer; // changer le curseur en pointeur au survol
+  color: var(--pink); // changer la couleur du texte en rose au survol
+}
+
+.class-previlege {
+  width: 10em;
+  height: 10em; 
+}
+
+.privileges-img {
+  margin: 0 2em; 
+  background-color: rgb(240, 240, 240); 
+  padding-bottom: 1%; 
+}
+
+.img-text {
+  font-family: Oswald_l;
+  font-size: 12px; 
+  margin: 1%; 
+  padding-left: 1%;
+  border-left-style: solid; 
+  padding:1em;
+  margin-left: 10%; 
+  border-color: var(--pink); 
+  border-width: 0.2em;
+}
+
+.img-title {
+  font-size: 14px; 
+  color: var(--pink); 
+  font-family: Oswald_med; 
+  margin-bottom: 5%; 
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .previleges {
+      flex-direction: column; 
+      padding: 5% 10%; 
+  }
+
+  .previleges-herosection {
+      text-align: center;
+      margin-bottom: 2em; 
+  }
+
+  .arrows {
+      margin-left: 0;
+      display: block; 
+      margin: 0 auto; 
+  }
+
+  .previleges-mobile {
+      flex-direction: row;
+      align-items: center; 
+      justify-content: space-around;
+  }
+
+  .privileges-img {
+      margin: 1em 0; 
+      width: 10em; 
+  }
+
+  .class-previlege {
+      width: 100%; 
+      height: auto; 
+  }
+
+  .img-text {
+      margin-left: 0; 
+      padding: 1em; 
+      text-align: center;
+  }
+}
+
+//RESPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .previleges {
+      padding: 5% 5%;
+  }
+
+  .previleges-mobile {
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .privileges-img {
+      margin: 1em 0;
+      width: 90%; 
+  }
+
+  .class-previlege {
+      width: 100%; 
+      height: auto; 
+  }
+
+  .img-text {
+      padding: 0.5em;
+      text-align: center; 
+  }
+}
+
+// BLOC 8 : SPONSORS
+
+.sponsors-section {
+  padding: 5% 20%;
+  position: relative; 
+  background-color: var(--purple);
+}
+
+.sponsors {
+  display: flex; 
+  justify-content: space-between; 
+  margin: 1em 0;
+}
+
+#sponsor {
+  position: absolute;
+  top: -22%;
+  left: 18%;
+  padding: 1% 2%; 
+  background-color: white; 
+}
+
+.sponsor {
+  background-color: rgba(0, 0, 0, 0.098);
+  padding: 2em;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 6em;
+  margin: 1% 0;
+}
+
+.sponsor img {
+  width:4em;
+  height: auto;
+}
+
+//RESPONSIVE DESIGN TAB:
+@media (min-width: 480px) and (max-width: 768px) {
+  .sponsors-section {
+      padding: 5% 10%;
+  }
+
+  #sponsor {
+      position: relative; 
+      top:0;
+      left: 0;
+      margin-bottom: 1em; 
+      text-align: center; 
+  }
+
+  .sponsors {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+  }
+
+  .sponsor {
+      width: 8em; 
+      padding: 1.5em; 
+  }
+
+  .sponsor img {
+      width: 5em; 
+  }
+}
+
+//REPONSIVE DESIGN PHONE:
+@media (max-width: 480px) {
+  .sponsors-section {
+      padding: 5% 5%; 
+  }
+
+  #sponsor {
+      font-size: 1.5em;
+      text-align: center;
+      padding: 0.5em 1em; 
+  }
+
+  .sponsors {
+      flex-direction: column; 
+      align-items: center; 
+      gap: 1em;
+  }
+
+  .sponsor {
+      width: 100%; 
+      padding: 1em; 
+  }
+
+  .sponsor img {
+      width: 6em;
+  }
+
+}
+
+//NAV BAR : 
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 5px 30px;
+  background-color: transparent;
+  text-transform: uppercase;
+  box-sizing: border-box; 
+}
+
+#home {
+  color: var(--pink);
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.logo:hover {
+  cursor: pointer; // change le curseur en pointeur au survol de l'image du logo
+}
+
+.navbar-left {
+  flex-shrink: 0; // empêche la réduction de la largeur de la partie gauche de la barre de navigation
+}
+
+.navbar-right {
+  display: flex; 
+  align-items: center; 
+  gap: 1em;
+}
+
+#selected-nav {
+  color: var(--pink); 
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none; // supprime les puces de la liste
+  gap: 1em;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none; // supprime le soulignement des liens
+  font-weight: bold; 
+}
+
+.navbar-menu li a:hover {
+  color: var(--hover-green);
+}
+
+.navbar-divider {
+  width: 0.2em;
+  height: 1em;
+  background-color: #ddd;
+}
+
+.search-container {
+  display: flex; 
+  align-items: center; 
+}
+
+.search-icon {
+  max-width: 20px; 
+  max-height: 20px; 
+  transition: transform 0.3s ease; 
+}
+
+.search-icon:hover {
+  transform: scale(1.1); // agrandit l'icône légèrement au survol
+  cursor: pointer; // change le curseur en pointeur au survol de l'icône
+}
+
+.btn-tickets {
+  padding: 1em 2em; 
+  background-color: transparent; // couleur de fond transparente pour le bouton
+  color: var(--pink); 
+  text-transform: uppercase;
+  font-family: Oswald_sb; 
+  line-height: 14px;
+  border: none; 
+  border-radius: 4px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.btn-tickets:hover {
+  color: white; 
+  background-color: var(--pink); 
+  cursor: pointer; 
+}
+
+// MENU BURGER :
+
+.burger {
+  display: none; // masque le menu par défaut (en mode desktop)
+  flex-direction: column; // aligne les éléments en colonne
+  cursor: pointer; // change le curseur en pointeur lors du survol
+}
+
+.burger .line {
+  height: 3px;
+  width: 25px; 
+  background-color: white; 
+  margin: 3px 0;
+}
+
+// PAGE CONTACT
+
+.contact-content {
+  display: flex; 
+  justify-content: center;
+  padding: 50px 200px; 
+  background-image: url('img/header_shape.png'); // image de fond pour la section de contact
+  background-repeat: no-repeat; // empêche la répétition de l'image de fond
+  background-size: contain; // ajuste l'image de fond pour qu'elle soit contenue dans l'élément
+  background-position-y: -50px; // déplace l'image de fond vers le haut de 50 pixels
+}
+
+.contact-form {
+  flex-grow: 1; // permet à la forme de s'agrandir pour remplir l'espace disponible
+  flex-shrink: 1; // permet à la forme de se rétrécir si nécessaire
+  flex-basis: 0%; // définit la taille de base de la forme à 0%
+  max-width: 500px; 
+  padding: 100px;
+  color: black; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.contact-form .form-group {
+  width: 100%; 
+  max-width: 400px;
+  margin: 10px 0px;
+}
+
+.form-group label {
+  padding: 5px; 
+  border-radius: 5px;
+  border-left-style: solid; 
+  border-color: var(--purple); 
+  border-width: 2px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize; 
+  color: var(--purple); 
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: solid; 
+  border-color: var(--purple); 
+  border-radius: 8px; 
+  background-color: white; 
+  color: black; 
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; // supprime le contour par défaut au focus
+  border: 1px solid var(--green); // change la bordure en violet au focus
+}
+
+.btn-submit{
+  display: inline-block;
+  color: #f5f5f7;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: background-color 0.3s;
+  background-color: rgb(137, 137, 137);
+  margin:0;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.btn-submit:hover {
+  background-color: #5a2ca0; 
+}
+
+// MENU BURGER :
+
+#menu-toggle {
+  display: none; // cache la checkbox pour le menu burger
+}
+
+.menu-icon {
+  display: none; // cache l'icône du menu par défaut (en mode desktop)
+  cursor: pointer; // change le curseur en pointeur lors du survol
+  font-size: 24px;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .navbar-menu {
+    display: none; // cache le menu classique en mode mobile
+  }
+
+  #menu-toggle {
+    display: none; // cache la checkbox pour le menu burger
+  }
+
+  .menu-icon {
+    display: block; // affiche l'icône du menu en mode mobile
+    cursor: pointer; // change le curseur en pointeur lors du survol
+    font-size: 24px; // taille de l'icône
+  }
+
+  .navbar-right {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; // réduit l'espacement des éléments dans la navbar
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar-menu {
+    display: flex; // affiche le menu burger lorsque le checkbox est coché
+    flex-direction: column; // aligne les éléments en colonne
+    position: absolute; // positionne le menu
+    top: 60px; // espace par rapport au haut
+    right: 0; // aligne à droite
+    background-color: var(--purple); // couleur de fond du menu
+    width: 100%; // largeur à 100%
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // ombre du menu
+    z-index: 1000; // pour qu'il soit au premier plan
+  }
+
+  .navbar-menu li {
+    padding: 10px 20px; // ajout de padding pour les éléments du menu
+  }
+}

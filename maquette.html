@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.A EVENT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+   <!-- NAV BAR --> 
+    <div class="top">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="maquette.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+            </div>
+
+            <div class="navbar-right">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label> <!--Icône burger-->
+                <ul class="navbar-menu">
+                    <li><a href="maquette.html" id="home">Home</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#speaker">Speaker</a></li>
+                    <li><a href="#sponsor">Sponsor</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="navbar-divider"></div>
+                <div class="search-container">
+                    <img src="img/search-icon.png" alt="Rechercher" class="search-icon">
+                </div>
+                <button class="btn-tickets">Buy<br>Tickets</button>
+            </div>
+        </nav>
+
+        <!-- BLOC 1 (herosection) -->
+        <div class="herosection">
+            <div class="subtitle">
+                <div class="subtitle_1">Business Meetup</div>
+                <div class="subtitle_2" id="highlight-text">Brunswick, Canada</div>
+            </div>
+            <h1 class="title">Open conference for <span class="highlight-text">everyone</span></h1>
+            <div class="countdown_subtitle">Starting in ↓</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number">10</div>
+                    <div class="countdown-label">jours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">12</div>
+                    <div class="countdown-label">heures</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">30</div>
+                    <div class="countdown-label">minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">45</div>
+                    <div class="countdown-label">secondes</div>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <!-- BLOC 2 (topic) -->
+    <div class="topicsection">
+        <h2 class="section-title" id="topic">The topic</h2>
+        <div class="topicsection-content">
+            <div class="topic-left">
+                <div class="topic-text"><span class="highlight-text">3 days event</span></div>
+                <div class="topic-text">Group Discussion</div>
+                <div class="topic-text">07 speakers</div>
+                <div class="topic-text">14 workshop</div>
+                <div class="topic-text">Dine</div>
+            </div>
+            <img src="img/tedtalk.png" id="topic-img" alt="Image d'une conférence">
+            <div class="topic-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas beatae tenetur vitae quae repellat cumque nemo, deleniti iure aliquam, voluptatem illo, excepturi vel aliquid laboriosam.</div>
+        </div>
+    </div>
+
+    <!-- BLOC 3 (speakers) -->
+    <div class="speakers-section">
+        <div class="register-left">
+            <h2 class="section-title">Meet the<br>speakers</h2>
+            <div class="description">Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.<br>Ipsa vero maiores sequi cupiditate.</div>
+            <div class="register-button">
+                <img src="img/img.png" alt="" class="register">
+                <div>Register now ➥</div>
+            </div>
+        </div>
+        <img src="img/speakers.png" id="speaker-img" alt="Image des speakers">
+    </div>
+
+    <!-- BLOC 4 (EVENT) -->
+    <div class="event-section">
+        <h2 class="section-title" id="event">event schedule</h2>
+        <div class="planning">
+            <div class="dates">
+                <div class="date-block" id="selected-date">june 27, 2018</div>
+                <div class="date-block">july 25, 2018</div>
+                <div class="date-block">sept 28, 2018</div>
+            </div>
+            <div class="sessions">
+                <div class="session" id="selected-session">session 1</div>
+                <div class="session">session 2</div>
+                <div class="session">session 3</div>
+                <div class="session">session 4</div>
+            </div>
+            <div class="planning-image"></div>
+        </div>
+        <div class="full-view">full view</div>
+    </div>
+
+    <!-- bloc 5 (book) -->
+    <div class="speakers-section">
+        <div class="register-left">
+            <h2 class="section-title">book your<br>seat now!</h2>
+            <div class="description">Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.<br>Ipsa vero maiores sequi cupiditate.</div>
+            <div class="register-button">
+                <img src="img/img.png" alt="" class="register">
+                <div>Register now ➥</div>
+            </div>
+        </div>
+        <img src="img/book-seat.png" id="book-img" alt="Image des tickets d'entrée">
+    </div>
+
+    <!-- bloc 6 (map) -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5624.075045620022!2d5.752041011733756!3d45.18633667095015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af51d07531543%3A0xcd2f028654267a51!2sMyDigitalSchool%20Grenoble!5e0!3m2!1sfr!2sfr!4v1730223742770!5m2!1sfr!2sfr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-overlay">
+            <div class="overlay-section">
+                <p class="q">📍 Where?</p>
+                <p>22 rue Galillée</p>
+                <p>38100 SMD</p>
+            </div>
+            <div class="overlay-section">
+                <p class="q">🕒 When?</p>
+                <p>22 June,2018 - 29 June,2018</p>
+                <p>Wednesday - Friday</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC 7 (PREVILEGES) -->
+    <div class="previleges">
+        <div class="previleges-herosection">
+            <h2 class="section-title">Previleges<br>you get</h2>
+            <div class="description">Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.<br>Ipsa vero maiores sequi cupiditate.</div>
+            <img src="img/arrows.png" alt="Bouton suivant/précédent" class="arrows">
+        </div>
+        <div class="previleges-mobile">
+        <div class="privileges-img">
+            <img src="img/westin.png" alt="Image de Westin" class="class-previlege">
+            <div class="img-text">
+                <div class="img-title">Westin</div>
+                <div class="img-description">31 bonar law ave, rexton,<br>new brunswick E4W 1V6,<br>Canada, +567 3215479</div>
+            </div>
+        </div>
+        <div class="privileges-img">
+            <img src="img/delouvre.png" alt="Image de De Louvre" class="class-previlege">
+            <div class="img-text">
+                <div class="img-title">De louvre</div>
+                <div class="img-description">31 bonar law ave, rexton,<br>new brunswick E4W 1V6,<br>Canada, +567 3215479</div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bloc 8 (sponsors) -->
+    <div class="sponsors-section">
+        <h2 class="section-title" id="sponsor">event<br>sponsors</h2>
+        <div class="sponsors">
+            <div class="sponsor" id="logo1"><img src="img/logo1.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo2"><img src="img/logo2.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo3"><img src="img/logo3.png" alt="Logo du sponsor"></div>
+            <div class="sponsor" id="logo4"><img src="img/logo4.png" alt="Logo du sponsor"></div>
+        </div>
+    </div>
+</body>
+</html>
